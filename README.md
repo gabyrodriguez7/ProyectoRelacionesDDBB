@@ -2,7 +2,7 @@ Nombre: Rodríguez Contreras Gabriela Lissette.
 Entidades y Relaciones
  
 1. Address (Dirección)
-2. 
+ 
 La entidad Address representa la dirección de un cliente (Customer). Tiene los siguientes atributos:
 
 id_address: Identificador único de la dirección (clave primaria).
