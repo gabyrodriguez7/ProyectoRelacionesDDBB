@@ -188,6 +188,8 @@ Obtener todas las entidades (GET)
 
 Método: GET
 
+URL: http://localhost:8080/addresses (para Address)
+
 URL: http://localhost:8080/customers (para Customer)
 
 URL: http://localhost:8080/doctors (para Doctor)
@@ -197,6 +199,8 @@ URL: http://localhost:8080/pets (para Pet)
 Obtener una entidad por ID (GET)
 
 Método: GET
+
+URL: http://localhost:8080/addresses/{id} (para Address)
 
 URL: http://localhost:8080/customers/{id} (para Customer)
 
@@ -208,17 +212,19 @@ Crear una nueva entidad (POST)
 
 Método: POST
 
+URL: http://localhost:8080/addresses(para Address)
+
 URL: http://localhost:8080/customers (para Customer)
 
 URL: http://localhost:8080/doctors (para Doctor)
 
 URL: http://localhost:8080/pets (para Pet)
 
-Cuerpo (Body): JSON similar al ejemplo proporcionado en cada caso.
-
 Actualizar una entidad existente (PUT)
 
 Método: PUT
+
+URL: http://localhost:8080/addresses/{id}(para Address)
 
 URL: http://localhost:8080/customers/{id} (para Customer)
 
@@ -226,11 +232,11 @@ URL: http://localhost:8080/doctors/{id} (para Doctor)
 
 URL: http://localhost:8080/pets/{id} (para Pet)
 
-Cuerpo (Body): JSON similar al ejemplo de actualización proporcionado en cada caso.
-
 Eliminar una entidad (DELETE)
 
 Método: DELETE
+
+URL: http://localhost:8080/addresses/{id}(para Address)
 
 URL: http://localhost:8080/customers/{id} (para Customer)
 
@@ -285,7 +291,6 @@ Actualizar un cliente existente (PUT)
   "address": {
     "street": "Avenida Principal",
     "city": "Guayaquil"
-    
   }
   
 }
@@ -298,7 +303,7 @@ Crear un nuevo doctor (POST)
 
   "name_doctor": "Dr. Watson",
   
-  "description": "Veterinarian specialized in dogs"
+  "description": "Especialista en perros"
   
 }
 
@@ -306,43 +311,42 @@ Actualizar un doctor existente (PUT)
 
 {
 
-  "name_doctor": "Dr. Watson",
+  "name_doctor": "Dr. Rodriguez",
   
-  "description": "Veterinarian specialized in all pets"
+  "description": "Especialista en gatos"
   
 }
-
 JSON para Pet
 
 Crear una nueva mascota (POST)
 
 {
 
-  "name": "Firulais",
+  "name": "Luna",
   
-  "type": "Dog",
+  "type": "gato",
   
-  "age": 5,
+  "age": 1,
   
   "customer": {
-    "id_customer": 1
+    "id_customer": 10
     
   }
   
 }
+
 Actualizar una mascota existente (PUT)
 
 {
 
-  "name": "Firulais",
+  "name": "Oreo",
   
-  "type": "Dog",
+  "type": "gato",
   
-  "age": 6,
+  "age": 2,
   
   "customer": {
-    "id_customer": 1
-    
+    "id_customer": 2
   }
   
 }
